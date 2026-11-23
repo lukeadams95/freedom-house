@@ -1,25 +1,47 @@
-# CODING AGENTS: READ THIS FIRST
+# Freedom House website
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Static, dependency-free website for Freedom House (Liberty, MO), implemented from the
+Claude Design handoff in `project/` (`Freedom House Home.dc.html`) and `chats/`.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## Pages
+| File | Page |
+| --- | --- |
+| `site/index.html` | Home |
+| `site/about.html` | About Us (Past / Present / Future, board) |
+| `site/ministries.html` | Our Ministries |
+| `site/contact.html` | Contact |
+| `site/donate.html` | Donate |
 
-## What you should do — IMPORTANT
+`site/` is the finished, ready-to-upload website. Host it on any static host
+(Netlify, GitHub Pages, Cloudflare Pages, or a shared host) by uploading the folder's contents.
 
-**Read the chat transcripts first.** There are 3 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+## Editing
+Edit files in `src/`, then rebuild:
 
-**Read `project/Freedom House Home.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+```sh
+python3 src/build.py      # writes site/
+```
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+- `src/pages/<page>.html` — each page's main content
+- `src/partials/header.html`, `src/partials/footer.html` — shared header and footer (one place for every page)
+- `src/assets/css/site.css` — shared styles, header, hover states
+- `src/assets/js/site.js` — sticky header, mobile menu, gift-amount pickers, FAQ, form handling, About tabs
+- `src/build.py` — `CONFIG` holds site-wide links and contact details; `PAGES` holds page titles and SEO descriptions
 
-## About the design files
+To preview locally: `cd site && python3 -m http.server` and open http://localhost:8000.
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+## Still needed from the client
+Set these in `CONFIG` in `src/build.py`:
+- `GIVEBUTTER_URL` — Givebutter donation page (all Donate/Give buttons; the header Donate goes to the Donate page)
+- `IRS_LETTER_URL` — 501(c)(3) determination letter PDF
+- `FACEBOOK_URL`, `INSTAGRAM_URL`
+- `SITE_URL` — final domain (enables canonical links)
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+In the page content (search for `[`): mission statement, event details, gift impact figures
+($25–$500), wishlist items, stats, board message, and photo/video placeholders.
+Also replace the Givebutter embed placeholder on the Donate page with the real widget code.
 
-## Bundle contents
-
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Freedom House website notes` project files (HTML prototypes, assets, components)
+## Forms
+The newsletter signups and the contact form validate and confirm in the browser but are
+**not yet connected** to anything. Hook them to an email-list provider and a form handler
+(see the `TODO` comments in `src/assets/js/site.js`).

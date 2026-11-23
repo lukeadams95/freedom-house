@@ -1,0 +1,125 @@
+/* Freedom House — shared styles. Design tokens: navy #0F2340, deep navy #0A1830, tan #D8C3A0, cream #F7F2E8, text #111418, blue #2E5AAC, green #1F6B4A. */
+
+/* ---------- Base + layout utilities (from the design) ---------- */
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',sans-serif;color:#111418;background:#F7F2E8;font-size:17px;line-height:1.6}
+*{box-sizing:border-box}
+a{color:#2E5AAC;text-decoration:none}
+a:hover{color:#0F2340}
+h1,h2,h3,p{margin:0}
+@media(max-width:640px){.fh-cta{flex:1 1 100%!important}
+}
+.fh-tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px;text-align:center}
+.fh-tli{position:relative;border-top:3px solid #0F2340;padding-top:22px}
+.fh-tli::before{content:"";position:absolute;top:-11px;left:calc(50% - 10px);width:19px;height:19px;background:#D8C3A0;border:3px solid #0F2340;border-radius:50%}
+@media(max-width:900px){.fh-tl{grid-template-columns:1fr;text-align:left}
+.fh-tli{border-top:0;border-left:3px solid #0F2340;padding:0 0 32px 28px}
+.fh-tli::before{top:0;left:-11px}
+}
+@media(max-width:700px){.fh-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.fh-tabline{display:none!important}
+}
+.fh-logo{width:160px;height:160px}
+.fh-jump{display:grid;grid-template-columns:repeat(4,160px);justify-content:center;gap:32px 40px}
+.fh-gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:200px;gap:16px}
+.fh-gal .big{grid-column:span 2;grid-row:span 2}
+@media(min-width:901px){.fh-alt{order:-1}
+}
+@media(max-width:700px){.fh-logo{width:120px;height:120px}
+.fh-jump{grid-template-columns:repeat(2,120px);gap:28px 32px}
+.fh-gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}
+.fh-gal .big{grid-column:span 2;grid-row:span 1}
+}
+.fh-phero{height:500px}
+@media(max-width:1023px){.fh-phero{height:440px}
+}
+@media(max-width:640px){.fh-phero{height:420px}
+.fh-phero h1{font-size:clamp(36px,11vw,44px)!important}
+.fh-phero .fh-sub{font-size:16px!important;margin:12px 0 20px!important}
+}
+.fh-ls{display:grid;grid-template-columns:repeat(4,220px);justify-content:space-between;gap:24px;max-width:100%;min-width:0}
+.fh-lsb{width:220px;height:90px}
+@media(max-width:1100px){.fh-ls{grid-template-columns:repeat(2,220px);justify-content:center;gap:28px 40px}
+}
+@media(max-width:700px){.fh-ls{grid-template-columns:repeat(2,150px);justify-content:center;gap:24px 20px}
+.fh-lsb{width:150px;height:70px}
+}
+
+
+/* ---------- Accessibility ---------- */
+.fh-skip{position:absolute;left:-9999px;top:0;z-index:100;background:#D8C3A0;color:#0F2340;padding:12px 20px;font-weight:700}
+.fh-skip:focus{left:12px;top:12px}
+:focus-visible{outline:3px solid #2E5AAC;outline-offset:2px}
+img{max-width:100%}
+
+/* ---------- Header ---------- */
+:root{--fh-head-h:107px;--fh-house-w:130px;--fh-house-left:24px;--fh-house-img:86px;--fh-house-pad:21px;--fh-content-left:178px}
+html.fh-scrolled{--fh-head-h:68px;--fh-house-w:88px;--fh-house-img:54px;--fh-house-pad:14px;--fh-content-left:136px}
+.fh-head-spacer{height:107px}
+.fh-header{position:fixed;top:0;left:0;right:0;z-index:50}
+.fh-mini{height:38px;overflow:hidden;background:#0A1830;border-bottom:1px solid #2B3F5E;color:#D8E2F2;font-size:13px;font-weight:500;transition:height .25s}
+html.fh-scrolled .fh-mini{height:0;border-bottom:0}
+.fh-mini-in{max-width:1240px;margin:0 auto;height:38px;padding:0 24px 0 var(--fh-content-left);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.fh-mini-group{display:flex;align-items:center;gap:24px}
+.fh-mini-right{gap:8px}
+.fh-mini-item{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.fh-mini-item a{color:inherit;font-weight:600}
+.fh-mini-item a:hover{color:#fff}
+.fh-soc{width:32px;height:32px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px;border:1.5px solid #fff;border-radius:50%}
+.fh-soc:hover{color:#0F2340;background:#fff}
+.fh-ig{width:14px;height:14px;border:1.5px solid currentColor;border-radius:4px;display:block;position:relative}
+.fh-ig::after{content:"";position:absolute;inset:2px;border:1.5px solid currentColor;border-radius:50%}
+.fh-soc:not(:hover) .fh-ig{border-color:#fff}
+.fh-main{height:68px;background:#0F2340}
+.fh-main-in{max-width:1240px;margin:0 auto;height:68px;padding:0 24px 0 var(--fh-content-left);display:flex;align-items:center;justify-content:flex-end;gap:36px}
+.fh-nav{display:flex;align-items:center;gap:36px}
+.fh-nav a{color:#fff;font-weight:600;font-size:16px;padding:6px 0;border-bottom:3px solid transparent;white-space:nowrap}
+.fh-nav a:hover,.fh-nav a:focus-visible{color:#D8C3A0;border-bottom-color:#D8C3A0}
+.fh-nav a.is-active{border-bottom-color:#D8C3A0}
+.fh-donate{background:#D8C3A0;color:#0F2340;border:2px solid #D8C3A0;border-radius:999px;padding:0 26px;min-height:46px;display:flex;align-items:center;font-weight:700;font-size:16px}
+.fh-donate:hover,.fh-donate.is-active{background:#fff;color:#0F2340}
+.fh-burger{display:none;width:48px;height:48px;background:none;border:0;cursor:pointer;flex-direction:column;justify-content:center;gap:6px;padding:12px}
+.fh-burger span{height:3px;background:#fff;display:block}
+.fh-house-layer{position:absolute;left:0;right:0;top:0;height:var(--fh-head-h);pointer-events:none}
+.fh-house-box{position:relative;max-width:1240px;margin:0 auto;height:100%}
+.fh-house{pointer-events:auto;position:absolute;left:var(--fh-house-left);top:0;width:var(--fh-house-w);height:var(--fh-head-h);background:#fff;clip-path:polygon(50% 0,100% 28%,100% 100%,0 100%,0 28%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:var(--fh-house-pad);z-index:2}
+.fh-house img{max-width:none;height:var(--fh-house-img);width:auto;flex:none;display:block;mix-blend-mode:multiply}
+.fh-panel{background:#0F2340;border-top:1px solid #2B3F5E;padding:12px 20px 24px;max-height:calc(100vh - 72px);overflow:auto}
+.fh-panel[hidden]{display:none}
+.fh-panel>a{display:flex;align-items:center;justify-content:center;min-height:52px;color:#fff;font-weight:700;font-size:24px}
+.fh-panel>a span{padding:4px 0;border-bottom:3px solid transparent}
+.fh-panel>a.is-active span{border-bottom-color:#D8C3A0}
+.fh-panel>a:hover{color:#D8C3A0}
+.fh-panel-info{border-top:1px solid #2B3F5E;margin-top:12px;padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:12px;color:#D8E2F2;font-size:16px;font-weight:500}
+.fh-panel-info .fh-mini-group{gap:10px}
+
+@media(max-width:1023px){
+  :root,html.fh-scrolled{--fh-head-h:72px;--fh-house-w:84px;--fh-house-left:12px;--fh-house-img:58px;--fh-house-pad:14px}
+  .fh-head-spacer{height:72px}
+  .fh-mini,.fh-nav{display:none}
+  .fh-main{height:72px}
+  .fh-main-in{height:72px;padding:0 12px 0 0;gap:10px}
+  .fh-donate{padding:0 18px;min-height:44px;font-size:15px}
+  .fh-burger{display:flex}
+}
+@media(min-width:1024px){.fh-panel{display:none!important}}
+
+/* ---------- Form feedback (contact form) ---------- */
+.fh-err{font-size:14px;font-weight:600;color:#B3261E;margin-top:6px}
+.fh-invalid{border-color:#B3261E!important}
+.fh-ok{background:#F7F2E8;border-left:6px solid #1F6B4A;padding:16px 20px;font-weight:600;color:#0F2340;margin-bottom:20px}
+
+/* ---------- Hover states (from the design's style-hover rules) ---------- */
+.hv-1:hover,.hv-1:focus-visible{background:#fff!important;color:#0F2340!important}
+.hv-2:hover,.hv-2:focus-visible{background:#fbf8f2!important}
+.hv-3:hover,.hv-3:focus-visible{color:#2E5AAC!important}
+.hv-4:hover,.hv-4:focus-visible{background:#2E5AAC!important;color:#fff!important}
+.hv-5:hover,.hv-5:focus-visible{background:#0F2340!important;color:#fff!important}
+.hv-6:hover,.hv-6:focus-visible{background:#fff!important}
+.hv-7:hover,.hv-7:focus-visible{background:#2E5AAC!important}
+.hv-8:hover,.hv-8:focus-visible{background:#D8C3A0!important;color:#0F2340!important}
+.hv-9:hover,.hv-9:focus-visible{background:#2E5AAC!important;border-color:#2E5AAC!important}
+.hv-10:hover,.hv-10:focus-visible{color:#fff!important}
+
+/* Links that were buttons in the design keep button text metrics */
+.fh-btn{line-height:normal;text-align:center}
