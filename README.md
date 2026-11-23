@@ -34,7 +34,6 @@ To preview locally: `cd site && python3 -m http.server` and open http://localhos
 Set these in `CONFIG` in `src/build.py`:
 - `GIVEBUTTER_URL` — Givebutter donation page (all Donate/Give buttons; the header Donate goes to the Donate page)
 - `IRS_LETTER_URL` — 501(c)(3) determination letter PDF
-- `FACEBOOK_URL`, `INSTAGRAM_URL`
 - `SITE_URL` — final domain (enables canonical links)
 
 In the page content (search for `[`): mission statement, event details, gift impact figures

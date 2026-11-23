@@ -23,8 +23,7 @@ OUT = ROOT / "site"
 CONFIG = {
     "GIVEBUTTER_URL": "#GIVEBUTTER_LINK",   # TODO: Freedom House Givebutter page
     "IRS_LETTER_URL": "#PDF_LINK",          # TODO: 501(c)(3) determination letter PDF
-    "FACEBOOK_URL": "#",                    # TODO
-    "INSTAGRAM_URL": "#",                   # TODO
+    "FACEBOOK_URL": "https://www.facebook.com/p/Freedom-House-Liberty-61550532695252/",
     "PHONE": "(816) 781-6357",
     "PHONE_TEL": "+18167816357",
     "HOURS_SHORT": "Thu &amp; Sat 9 AM – 12 PM",
@@ -56,8 +55,7 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght
          "12..96,800&family=Inter:wght@400;500;600;700&display=swap")
 
 SOCIAL_SMALL = (
-    '<a class="fh-soc" href="{{FACEBOOK_URL}}" aria-label="Facebook">f</a>'
-    '<a class="fh-soc" href="{{INSTAGRAM_URL}}" aria-label="Instagram"><span class="fh-ig"></span></a>'
+    '<a class="fh-soc" href="{{FACEBOOK_URL}}" target="_blank" rel="noopener" aria-label="Freedom House on Facebook">f</a>'
 )
 
 HEAD = """<!DOCTYPE html>

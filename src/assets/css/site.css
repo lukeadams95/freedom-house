@@ -67,9 +67,6 @@ html.fh-scrolled .fh-mini{height:0;border-bottom:0}
 .fh-mini-item a:hover{color:#fff}
 .fh-soc{width:32px;height:32px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px;border:1.5px solid #fff;border-radius:50%}
 .fh-soc:hover{color:#0F2340;background:#fff}
-.fh-ig{width:14px;height:14px;border:1.5px solid currentColor;border-radius:4px;display:block;position:relative}
-.fh-ig::after{content:"";position:absolute;inset:2px;border:1.5px solid currentColor;border-radius:50%}
-.fh-soc:not(:hover) .fh-ig{border-color:#fff}
 .fh-main{height:68px;background:#0F2340}
 .fh-main-in{max-width:1240px;margin:0 auto;height:68px;padding:0 24px 0 var(--fh-content-left);display:flex;align-items:center;justify-content:flex-end;gap:36px}
 .fh-nav{display:flex;align-items:center;gap:36px}
