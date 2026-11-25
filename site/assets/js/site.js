@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var root = document.documentElement;
-  var NAVY = 'rgb(15, 35, 64)', WHITE = 'rgb(255, 255, 255)';
+  var NAVY = 'rgb(45, 55, 144)', WHITE = 'rgb(255, 255, 255)';
 
   /* ---------- Header: shrink on scroll ---------- */
   function onScroll() { root.classList.toggle('fh-scrolled', window.scrollY > 20); }
