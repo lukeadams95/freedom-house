@@ -145,7 +145,7 @@
         t.style.color = on ? WHITE : NAVY;
         t.style.borderBottomColor = on ? '#D8C3A0' : 'transparent';
         var spans = t.querySelectorAll('span');
-        if (spans[0]) spans[0].style.color = on ? '#D8C3A0' : '#2E5AAC';
+        if (spans[0]) spans[0].style.color = on ? '#D8C3A0' : '#2D3790';
         if (spans[2]) spans[2].style.color = on ? WHITE : NAVY;
         if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
       });

@@ -1,10 +1,10 @@
-/* Freedom House — shared styles. Design tokens: navy #0F2340, deep navy #0A1830, tan #D8C3A0, cream #F7F2E8, text #111418, blue #2E5AAC, green #1F6B4A. */
+/* Freedom House — shared styles. Design tokens: navy #0F2340, deep navy #0A1830, tan #D8C3A0, cream #F7F2E8, text #111418, blue #2D3790, green #1F6B4A. */
 
 /* ---------- Base + layout utilities (from the design) ---------- */
 html{scroll-behavior:smooth}
 body{margin:0;font-family:'Inter',sans-serif;color:#111418;background:#F7F2E8;font-size:17px;line-height:1.6}
 *{box-sizing:border-box}
-a{color:#2E5AAC;text-decoration:none}
+a{color:#2D3790;text-decoration:none}
 a:hover{color:#0F2340}
 h1,h2,h3,p{margin:0}
 @media(max-width:640px){.fh-cta{flex:1 1 100%!important}
@@ -49,7 +49,7 @@ h1,h2,h3,p{margin:0}
 /* ---------- Accessibility ---------- */
 .fh-skip{position:absolute;left:-9999px;top:0;z-index:100;background:#D8C3A0;color:#0F2340;padding:12px 20px;font-weight:700}
 .fh-skip:focus{left:12px;top:12px}
-:focus-visible{outline:3px solid #2E5AAC;outline-offset:2px}
+:focus-visible{outline:3px solid #2D3790;outline-offset:2px}
 img{max-width:100%}
 
 /* ---------- Header ---------- */
@@ -109,13 +109,13 @@ html.fh-scrolled .fh-mini{height:0;border-bottom:0}
 /* ---------- Hover states (from the design's style-hover rules) ---------- */
 .hv-1:hover,.hv-1:focus-visible{background:#fff!important;color:#0F2340!important}
 .hv-2:hover,.hv-2:focus-visible{background:#fbf8f2!important}
-.hv-3:hover,.hv-3:focus-visible{color:#2E5AAC!important}
-.hv-4:hover,.hv-4:focus-visible{background:#2E5AAC!important;color:#fff!important}
+.hv-3:hover,.hv-3:focus-visible{color:#2D3790!important}
+.hv-4:hover,.hv-4:focus-visible{background:#2D3790!important;color:#fff!important}
 .hv-5:hover,.hv-5:focus-visible{background:#0F2340!important;color:#fff!important}
 .hv-6:hover,.hv-6:focus-visible{background:#fff!important}
-.hv-7:hover,.hv-7:focus-visible{background:#2E5AAC!important}
+.hv-7:hover,.hv-7:focus-visible{background:#2D3790!important}
 .hv-8:hover,.hv-8:focus-visible{background:#D8C3A0!important;color:#0F2340!important}
-.hv-9:hover,.hv-9:focus-visible{background:#2E5AAC!important;border-color:#2E5AAC!important}
+.hv-9:hover,.hv-9:focus-visible{background:#2D3790!important;border-color:#2D3790!important}
 .hv-10:hover,.hv-10:focus-visible{color:#fff!important}
 
 /* Links that were buttons in the design keep button text metrics */
