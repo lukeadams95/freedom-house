@@ -72,7 +72,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
-      if (btn) btn.textContent = "Thank you, you're on the list";
+      if (btn) btn.textContent = "Preview only: signup not connected yet";
     });
   });
 
@@ -117,7 +117,7 @@
       if (!ok) {
         ok = document.createElement('p');
         ok.className = 'fh-ok'; ok.setAttribute('role', 'status');
-        ok.textContent = 'Thank you. Your message is on its way.';
+        ok.textContent = 'Preview only: this form is not connected yet. Nothing was sent.';
         heading.insertAdjacentElement('afterend', ok);
       }
     });

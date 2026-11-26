@@ -47,7 +47,7 @@ PAGES = {
                    "Meet the ministries at Freedom House in Liberty, MO: Love INC of Clay County, In As Much Ministry, Hillcrest Transitional Housing and Rebuilding Together Kansas City."),
     "contact": ("Contact | Freedom House Liberty",
                 "Visit Freedom House at 2050 Plumbers Way, Liberty, MO 64068. Open Thursday & Saturday, 9 AM – 12 PM. Call (816) 781-6357."),
-    "donate": ("Donate | Freedom House Liberty — A Non Profit to Donate To",
+    "donate": ("Donate | Freedom House Liberty, A Non Profit to Donate To",
                "Donate to Freedom House, a Liberty non profit. One gift keeps the doors open for every ministry under our roof."),
 }
 
@@ -64,6 +64,7 @@ HEAD = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
